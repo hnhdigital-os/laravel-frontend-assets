@@ -1,0 +1,34 @@
+{
+    "name": "hnhdigital-os/laravel-frontend-assets",
+    "description": "Provides some foundation assets",
+    "keywords": ["laravel","assets", "frontend"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rocco Howard",
+            "email": "rocco@hnh.digital"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "hnhdigital-os/laravel-frontend-asset-loader": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.*",
+        "illuminate/database": "4.*|5.*",
+        "symfony/process": "~2.3",
+        "codeclimate/php-test-reporter": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "HnhDigital\\LaravelFrontendAssets\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HnhDigital\\LaravelFrontendAssets\\ServiceProvider"
+            ]
+        }
+    }
+}
