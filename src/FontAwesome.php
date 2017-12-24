@@ -1,8 +1,8 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
-use Resource;
+use FrontendAsset;
 
 class FontAwesome
 {
@@ -17,24 +17,24 @@ class FontAwesome
      */
     public function __construct($version = false)
     {
-        $version = Resource::version(class_basename(__CLASS__), $version);
+        $version = FrontendAsset::version(class_basename(__CLASS__), $version);
 
         if ($version < 5) {
             return $this->v4();
         }
 
-        Resource::add('vendor/fontawesome-all.css');
+        FrontendAsset::add('vendor/fontawesome-all.css');
     }
 
     private function v4()
     {
         if (!env('APP_CDN', true)) {
-            Resource::add('vendor/font-awesome/css/font-awesome.min.css');
+            FrontendAsset::add('vendor/font-awesome/css/font-awesome.min.css');
 
             return;
         }
 
-        $version = Resource::version(class_basename(__CLASS__), $version);
-        Resource::add('https://maxcdn.bootstrapcdn.com/font-awesome/'.$version.'/css/font-awesome.min.css');
+        $version = FrontendAsset::version(class_basename(__CLASS__), $version);
+        FrontendAsset::add('https://maxcdn.bootstrapcdn.com/font-awesome/'.$version.'/css/font-awesome.min.css');
     }
 }

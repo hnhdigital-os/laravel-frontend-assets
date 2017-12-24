@@ -1,21 +1,21 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
-use Resource;
+use FrontendAsset;
 
 class ValidateInput
 {
     public function __construct($version = false)
     {
-        Resource::container('Jquery');
+        FrontendAsset::container('Jquery');
         if (!env('APP_CDN', true)) {
-            Resource::add('vendor/validate.min.js');
-            Resource::add('vendor/validate-additional.min.js');
+            FrontendAsset::add('vendor/validate.min.js');
+            FrontendAsset::add('vendor/validate-additional.min.js');
         } else {
-            $version = Resource::version(class_basename(__CLASS__), $version);
-            Resource::add('https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/'.$version.'/jquery.validate.min.js');
-            Resource::add('https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/'.$version.'/additional-methods.min.js');
+            $version = FrontendAsset::version(class_basename(__CLASS__), $version);
+            FrontendAsset::add('https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/'.$version.'/jquery.validate.min.js');
+            FrontendAsset::add('https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/'.$version.'/additional-methods.min.js');
         }
     }
 }

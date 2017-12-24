@@ -1,24 +1,24 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
 use Html;
-use Resource;
+use FrontendAsset;
 
 class Dropzone
 {
     public function __construct($version = false)
     {
         if (!env('APP_CDN', true)) {
-            Resource::add('vendor/dropzone.js');
-            Resource::add('vendor/dropzone.css');
+            FrontendAsset::add('vendor/dropzone.js');
+            FrontendAsset::add('vendor/dropzone.css');
         } else {
-            $version = Resource::version(class_basename(__CLASS__), $version);
-            Resource::add('https://cdnjs.cloudflare.com/ajax/libs/dropzone/'.$version.'/min/dropzone.min.js');
-            Resource::add('vendor/dropzone.css');
+            $version = FrontendAsset::version(class_basename(__CLASS__), $version);
+            FrontendAsset::add('https://cdnjs.cloudflare.com/ajax/libs/dropzone/'.$version.'/min/dropzone.min.js');
+            FrontendAsset::add('vendor/dropzone.css');
         }
 
-        Resource::addScript('if (typeof Dropzone != \'undefined\') { Dropzone.autoDiscover = false; }');
+        FrontendAsset::addScript('if (typeof Dropzone != \'undefined\') { Dropzone.autoDiscover = false; }');
     }
 
     public static function options($options = [])

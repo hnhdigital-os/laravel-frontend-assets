@@ -1,19 +1,19 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
-use Resource;
+use FrontendAsset;
 
 class Sparkline
 {
     public function __construct($version = false)
     {
         if (!env('APP_CDN', true)) {
-            Resource::add('vendor/sparkline.js');
+            FrontendAsset::add('vendor/sparkline.js');
         } else {
-            $version = Resource::version(class_basename(__CLASS__), $version);
-            Resource::add('https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/'.$version.'/jquery.sparkline.min.js');
+            $version = FrontendAsset::version(class_basename(__CLASS__), $version);
+            FrontendAsset::add('https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/'.$version.'/jquery.sparkline.min.js');
         }
-        Resource::container('Jquery');
+        FrontendAsset::container('Jquery');
     }
 }

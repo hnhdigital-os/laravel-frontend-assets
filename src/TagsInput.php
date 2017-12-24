@@ -1,20 +1,20 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
-use Resource;
+use FrontendAsset;
 
 class TagsInput
 {
     public function __construct($version = false)
     {
         if (!env('APP_CDN', true)) {
-            Resource::add('vendor/tags-input.js');
-            Resource::add('vendor/tags-input.css');
+            FrontendAsset::add('vendor/tags-input.js');
+            FrontendAsset::add('vendor/tags-input.css');
         } else {
-            $version = Resource::version(class_basename(__CLASS__), $version);
-            Resource::add('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/'.$version.'/bootstrap-tagsinput.js');
-            Resource::add('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/'.$version.'/bootstrap-tagsinput.css');
+            $version = FrontendAsset::version(class_basename(__CLASS__), $version);
+            FrontendAsset::add('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/'.$version.'/bootstrap-tagsinput.js');
+            FrontendAsset::add('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/'.$version.'/bootstrap-tagsinput.css');
         }
     }
 }

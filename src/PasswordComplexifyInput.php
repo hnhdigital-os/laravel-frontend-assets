@@ -1,22 +1,22 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
-use Resource;
+use FrontendAsset;
 
 class PasswordComplexifyInput
 {
     public function __construct($version = false)
     {
         if (!env('APP_CDN', true)) {
-            Resource::add('vendor/complexify.js');
-            Resource::add('vendor/complexify.banlist.js');
-            Resource::add('vendor/complexify.css');
+            FrontendAsset::add('vendor/complexify.js');
+            FrontendAsset::add('vendor/complexify.banlist.js');
+            FrontendAsset::add('vendor/complexify.css');
         } else {
-            $version = Resource::version(class_basename(__CLASS__), $version);
-            Resource::add('https://cdnjs.cloudflare.com/ajax/libs/jquery.complexify.js/'.$version.'/jquery.complexify.min.js');
-            Resource::add('https://cdnjs.cloudflare.com/ajax/libs/jquery.complexify.js/'.$version.'/jquery.complexify.banlist.js');
-            Resource::add('vendor/complexify.css');
+            $version = FrontendAsset::version(class_basename(__CLASS__), $version);
+            FrontendAsset::add('https://cdnjs.cloudflare.com/ajax/libs/jquery.complexify.js/'.$version.'/jquery.complexify.min.js');
+            FrontendAsset::add('https://cdnjs.cloudflare.com/ajax/libs/jquery.complexify.js/'.$version.'/jquery.complexify.banlist.js');
+            FrontendAsset::add('vendor/complexify.css');
         }
     }
 }

@@ -1,20 +1,20 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
-use Resource;
+use FrontendAsset;
 
 class TimePickerInput
 {
     public function __construct($version = false)
     {
         if (!env('APP_CDN', true)) {
-            Resource::add('vendor/timepicker.css');
-            Resource::add('vendor/timepicker.js');
+            FrontendAsset::add('vendor/timepicker.css');
+            FrontendAsset::add('vendor/timepicker.js');
         } else {
-            $version = Resource::version(class_basename(__CLASS__), $version);
-            Resource::add('https://cdn.jsdelivr.net/jquery.timepicker/'.$version.'/jquery.timepicker.css');
-            Resource::add('https://cdn.jsdelivr.net/jquery.timepicker/'.$version.'/jquery.timepicker.min.js');
+            $version = FrontendAsset::version(class_basename(__CLASS__), $version);
+            FrontendAsset::add('https://cdn.jsdelivr.net/jquery.timepicker/'.$version.'/jquery.timepicker.css');
+            FrontendAsset::add('https://cdn.jsdelivr.net/jquery.timepicker/'.$version.'/jquery.timepicker.min.js');
         }
     }
 }

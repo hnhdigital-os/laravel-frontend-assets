@@ -1,13 +1,13 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
-use Resource;
+use FrontendAsset;
 
 class StickyTabs
 {
     public function __construct($version = false)
     {
-        Resource::add('vendor/sticky-tabs.js');
+        FrontendAsset::add('vendor/sticky-tabs.js');
     }
 }

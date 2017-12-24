@@ -1,15 +1,15 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
-use Resource;
+use FrontendAsset;
 
 class VectorMap
 {
     public function __construct()
     {
-        Resource::add('vendor/jquery.jvectormap.css');
-        Resource::add('vendor/jquery.jvectormap.min.js');
-        Resource::add('vendor/jquery.jvectormap-world-mill-en.js');
+        FrontendAsset::add('vendor/jquery.jvectormap.css');
+        FrontendAsset::add('vendor/jquery.jvectormap.min.js');
+        FrontendAsset::add('vendor/jquery.jvectormap-world-mill-en.js');
     }
 }

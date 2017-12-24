@@ -1,8 +1,8 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
-use Resource;
+use FrontendAsset;
 
 class Jquery
 {
@@ -18,12 +18,12 @@ class Jquery
     public function __construct($version = false)
     {
         if (!env('APP_CDN', true)) {
-            Resource::add('vendor/jquery.js', 'header');
+            FrontendAsset::add('vendor/jquery.js', 'header');
 
             return;
         }
 
-        $version = Resource::version(class_basename(__CLASS__), $version);
-        Resource::addFirst('https://ajax.googleapis.com/ajax/libs/jquery/'.$version.'/jquery.min.js', 'header');
+        $version = FrontendAsset::version(class_basename(__CLASS__), $version);
+        FrontendAsset::addFirst('https://ajax.googleapis.com/ajax/libs/jquery/'.$version.'/jquery.min.js', 'header');
     }
 }

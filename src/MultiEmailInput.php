@@ -1,15 +1,15 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
-use Resource;
+use FrontendAsset;
 
 class MultiEmailInput
 {
     public function __construct($version = false)
     {
-        Resource::container('TagsInput');
-        Resource::add('vendor/multi-email.js');
-        Resource::add('vendor/multi-email.css');
+        FrontendAsset::container('TagsInput');
+        FrontendAsset::add('vendor/multi-email.js');
+        FrontendAsset::add('vendor/multi-email.css');
     }
 }

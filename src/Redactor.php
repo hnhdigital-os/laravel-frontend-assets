@@ -1,15 +1,15 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
-use Resource;
+use FrontendAsset;
 
 class Redactor
 {
     public function __construct()
     {
-        Resource::add('vendor/redactor.js');
-        Resource::add('vendor/redactor.css');
+        FrontendAsset::add('vendor/redactor.js');
+        FrontendAsset::add('vendor/redactor.css');
     }
 
     private static $plugins = [
@@ -55,10 +55,10 @@ class Redactor
     {
         if (in_array($plugin, self::$plugins)) {
             $plugins[] = $plugin;
-            Resource::add('vendor/redactor/'.$plugin.'.js');
+            FrontendAsset::add('vendor/redactor/'.$plugin.'.js');
 
             if ($plugin == 'alignment' || $plugin == 'clips') {
-                Resource::add('vendor/redactor/'.$plugin.'.css');
+                FrontendAsset::add('vendor/redactor/'.$plugin.'.css');
             }
         }
     }

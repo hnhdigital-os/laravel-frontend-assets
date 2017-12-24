@@ -1,21 +1,21 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
-use Resource;
+use FrontendAsset;
 
 class Bootstrap
 {
     public function __construct($version = false)
     {
-        Resource::container('Jquery');
+        FrontendAsset::container('Jquery');
         if (!env('APP_CDN', true)) {
-            Resource::add('vendor/bootstrap.js');
+            FrontendAsset::add('vendor/bootstrap.js');
         } else {
-            $version = Resource::version(class_basename(__CLASS__), $version);
-            Resource::add('https://maxcdn.bootstrapcdn.com/bootstrap/'.$version.'/js/bootstrap.min.js');
+            $version = FrontendAsset::version(class_basename(__CLASS__), $version);
+            FrontendAsset::add('https://maxcdn.bootstrapcdn.com/bootstrap/'.$version.'/js/bootstrap.min.js');
         }
-        Resource::container('StickyTabs');
-        Resource::add('vendor/bootstrap.css');
+        FrontendAsset::container('StickyTabs');
+        FrontendAsset::add('vendor/bootstrap.css');
     }
 }

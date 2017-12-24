@@ -1,14 +1,14 @@
 <?php
 
-namespace Bluora\LaravelResourcesLoader\Assets;
+namespace HnhDigital\LaravelFrontendAssets;
 
-use Resource;
+use FrontendAsset;
 
 class TimeInput
 {
     public function __construct()
     {
-        Resource::add('vendor/timepicker.css');
-        Resource::add('vendor/timepicker.js');
+        FrontendAsset::add('vendor/timepicker.css');
+        FrontendAsset::add('vendor/timepicker.js');
     }
 }
