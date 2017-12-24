@@ -1,7 +1,6 @@
 <?php
 
 return [
-    'AutoInit'                => [HnhDigital\LaravelFrontendAssets\AutoInit::class],
     'Backbone'                => [HnhDigital\LaravelFrontendAssets\Backbone::class, '1.3.3'],
     'BackboneMarionette'      => [HnhDigital\LaravelFrontendAssets\BackboneMarionette::class, '3.5.0'],
     'BackboneLocalPersist'    => [HnhDigital\LaravelFrontendAssets\BackboneLocalPersist::class, '1.1.1'],
