@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'Autosize'                => [HnhDigital\LaravelFrontendAssets\Autosize::class, '4.0.0'],
     'Backbone'                => [HnhDigital\LaravelFrontendAssets\Backbone::class, '1.3.3'],
     'BackboneMarionette'      => [HnhDigital\LaravelFrontendAssets\BackboneMarionette::class, '3.5.0'],
     'BackboneLocalPersist'    => [HnhDigital\LaravelFrontendAssets\BackboneLocalPersist::class, '1.1.1'],
