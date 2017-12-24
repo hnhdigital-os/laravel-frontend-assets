@@ -2,8 +2,8 @@
 
 namespace HnhDigital\LaravelFrontendAssets;
 
-use FrontendAsset;
 use Html;
+use FrontendAsset;
 
 class Dropzone
 {
