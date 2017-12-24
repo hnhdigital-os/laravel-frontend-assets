@@ -2,7 +2,6 @@
 
 namespace HnhDigital\LaravelFrontendAssets;
 
-use Blade;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
