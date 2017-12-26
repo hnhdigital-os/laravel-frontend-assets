@@ -20,13 +20,19 @@ class FontAwesome
         $version = FrontendAsset::version(class_basename(__CLASS__), $version);
 
         if ($version < 5) {
-            return $this->v4();
+            return $this->version4();
         }
 
         FrontendAsset::add('vendor/fontawesome-all.css');
+        FrontendAsset::add('vendor/fontawesome/js/fontawesome-all.js');
     }
 
-    private function v4()
+    /**
+     * Using version 4.
+     *
+     * @return void
+     */
+    private function version4()
     {
         if (!env('APP_CDN', true)) {
             FrontendAsset::add('vendor/font-awesome/css/font-awesome.min.css');
