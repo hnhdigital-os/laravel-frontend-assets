@@ -6,33 +6,32 @@ use FrontendAsset;
 
 class Toastr
 {
-
     /**
      * Default config.
      *
      * @var array
      */
     private static $default_config = [
-        'closeButton' => true,
-        'debug' => false,
-        'progressBar' => true,
+        'closeButton'       => true,
+        'debug'             => false,
+        'progressBar'       => true,
         'preventDuplicates' => true,
-        'positionClass' => 'toast-top-right',
-        'onclick' => null,
-        'showDuration' => '400',
-        'hideDuration' => '1000',
-        'timeOut' => '7000',
-        'extendedTimeOut' => '1000',
-        'showEasing' => 'swing',
-        'hideEasing' => 'linear',
-        'showMethod' => 'fadeIn',
-        'hideMethod' => 'fadeOut'
+        'positionClass'     => 'toast-top-right',
+        'onclick'           => null,
+        'showDuration'      => '400',
+        'hideDuration'      => '1000',
+        'timeOut'           => '7000',
+        'extendedTimeOut'   => '1000',
+        'showEasing'        => 'swing',
+        'hideEasing'        => 'linear',
+        'showMethod'        => 'fadeIn',
+        'hideMethod'        => 'fadeOut',
     ];
 
     /**
      * Add asset.
      *
-     * @param boolean $version
+     * @param bool $version
      */
     public function __construct($version = false)
     {
