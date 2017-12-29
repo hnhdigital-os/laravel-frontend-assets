@@ -18,7 +18,7 @@ class JqueryUi
     public function __construct($version = false)
     {
         FrontendAsset::container('Jquery');
-        $theme = empty($theme) ? config('resource.JqueryUiTheme.1') : $theme;
+        $theme = empty($theme) ? config('frontend-assets.JqueryUiTheme.1') : $theme;
 
         if (!env('APP_CDN', true)) {
             FrontendAsset::add('vendor/jquery-ui.js', 'header');
