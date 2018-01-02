@@ -1,4 +1,3 @@
-
 /**
  * Slimscroll
  */
@@ -7,7 +6,7 @@ $.frontendAssets.register('slimscroll', function(event) {
 
   var options = {
     touchScrollStep: 50,
-    alwaysVisible: true
+    alwaysVisible: true,
   };
 
   if (element.data('slimscroll-height')) {
