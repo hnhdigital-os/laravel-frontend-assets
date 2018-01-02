@@ -1,4 +1,3 @@
-
 /**
  * Multiple email inputs.
  */

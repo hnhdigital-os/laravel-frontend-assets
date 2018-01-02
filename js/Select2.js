@@ -1,4 +1,3 @@
-
 /**
  * Select2.
  */
@@ -14,7 +13,9 @@ $.frontendAssets.register('select2', function(event) {
   }
   if (element.data('select2-remote-url')) {
     options.ajax = element.data('select2-remote-data');
-    options.escapeMarkup = function (markup) { return markup; };
+    options.escapeMarkup = function(markup) {
+      return markup;
+    };
     options.minimumInputLength = 1;
     if (element.data('select2-remote-min-length')) {
       options.minimumInputLength = element.data('select2-remote-min-length');

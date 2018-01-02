@@ -1,7 +1,6 @@
-
 $(function() {
-    $('.nav-tabs').stickyTabs({
-        showTabUsingClickTrigger: true,
-        showParentTabs: true
-    });
+  $('.nav-tabs').stickyTabs({
+    showTabUsingClickTrigger: true,
+    showParentTabs: true,
+  });
 });
