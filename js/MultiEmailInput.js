@@ -1,12 +1,15 @@
 
-$('.init-multi-email-input').on('extension::multi-email-input::init',  function(event) {
-    element = $(event.currentTarget);
+/**
+ * Multiple email inputs.
+ */
+$.frontendAssets.register('multi-email-input', function(event) {
+  var element = $(event.currentTarget);
 
-    if (!$(this).hasClass('multi-email-input-applied')) {
-        $(this).multiEmail();
-        $(this).addClass('multi-email-input-applied');
-        $(this).addClass('bootstrap-multiemail');
+  if (!element.hasClass('multi-email-input-applied')) {
+    element.multiEmail();
+    element.addClass('multi-email-input-applied');
+    element.addClass('bootstrap-multiemail');
 
-        element.trigger('extension::multi-email-input::applied');
-    }
+    element.trigger('extension::multi-email-input::applied');
+  }
 });

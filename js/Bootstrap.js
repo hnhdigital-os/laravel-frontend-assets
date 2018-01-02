@@ -1,4 +1,10 @@
 
-$('.init-bs-tooltip').on('extension::bs-tooltip::init',  function(event) {
-    $(this).data('toggle', 'tooltip').tooltip();
+/**
+ * Bootstrap Tooltip.
+ */
+$.frontendAssets.register('bs-tooltip', function(event) {
+  $(this).data('toggle', 'tooltip');
+  $(this).tooltip();
+
+  $(this).trigger('extension::bs-tooltip::applied');
 });

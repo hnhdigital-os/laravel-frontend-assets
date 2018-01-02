@@ -1,8 +1,11 @@
 
-$('.init-date-input').on('extension::date-input::init',  function(event) {
-    element = $(event.currentTarget);
+/**
+ * Data input.
+ */
+$.frontendAssets.register('date-input', function(event) {
+    var element = $(event.currentTarget);
 
-    options = {};
+    var options = {};
     options['zIndexOffset'] = 1001;
     options['format'] = 'dd/mm/yyyy';
     options['todayHighlight'] = true;
