@@ -4,5 +4,5 @@
 $.frontendAssets.register('autosize', function(event) {
   autosize($(this));
 
-  element.trigger('extension::autosize::applied');
+  $(this).trigger('extension::autosize::applied');
 });
