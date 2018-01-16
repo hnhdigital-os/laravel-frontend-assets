@@ -9,6 +9,7 @@ return [
     'BackboneMarionette'      => [Assets\BackboneMarionette::class, '3.5.0'],
     'BackboneLocalPersist'    => [Assets\BackboneLocalPersist::class, '1.1.1'],
     'Bootstrap'               => [Assets\Bootstrap::class, '3.3.6'],
+    'ChartJs'                 => [Assets\ChartJs::class, '2.7.1'],
     'PasswordComplexifyInput' => [Assets\PasswordComplexifyInput::class, '0.5.1'],
     'DateInput'               => [Assets\DateInput::class, '1.6.1'],
     'DiffMatchPatch'          => [false, '20121119'],
