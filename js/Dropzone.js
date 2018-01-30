@@ -11,7 +11,7 @@ $.frontendAssets.register('dropzone', function(event) {
     }
     options['init'] = function() {
       if (typeof element.data('dropzone-init') == 'function') {
-        element.data('dropzone-init')();
+        element.data('dropzone-init')(this);
       }
     };
     element.dropzone(options);
