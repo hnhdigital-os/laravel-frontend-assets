@@ -53,5 +53,9 @@ $.frontendAssets.register(
     ].geocoder = new google.maps.Geocoder();
     $.frontendAssets.storage['google-maps'].maps = {};
     $.frontendAssets.storage['google-maps'].markers = {};
+  },
+  {
+    maps: {},
+    markers: {}
   }
 );
