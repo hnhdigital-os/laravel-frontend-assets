@@ -2,23 +2,35 @@
  * Animate CSS.
  */
 $.fn.extend({
-  animateCss: function(animationName, animate, animationFalse) {
-    animate = typeof animate !== 'undefined' ? animate : true;
-    animationFalse =
-      typeof animationFalse !== 'undefined' ? animationFalse : true;
+  animateCss: function(animation, animate, options) {
 
-    if (!animate && animationFalse != false) {
+    if (typeof animation == 'object') {
+      animation_name = animation[0];
+      animation_false = animation[0];
+    } else {
+      animation_name = animation;
+      animation_false = false;
+    }
+
+    animate = typeof animate !== 'undefined' ? animate : true;
+    options = typeof options !== 'undefined' ? options : {};
+
+
+    if (!animate && animation_false != false) {
       animate = true;
-      animationName = animationFalse;
+      animation_name = animation_false;
     }
 
     if (animate) {
       var animationEnd =
         'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
       $(this)
-        .addClass('animated ' + animationName)
+        .addClass('animated ' + animation_name)
         .one(animationEnd, function() {
-          $(this).removeClass('animated ' + animationName);
+          $(this).removeClass('animated ' + animation_name);
+          if (typeof options.on.end == 'function') {
+            options.on.end.call(this);
+          }
         });
     }
 
