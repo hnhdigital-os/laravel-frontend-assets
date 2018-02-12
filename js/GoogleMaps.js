@@ -33,17 +33,22 @@ $.frontendAssets.register(
 
     var draggable = element.data('draggable') != undefined;
 
-    $.frontendAssets.storage['google-maps'].markers[
-      element.prop('id')
-    ] = new google.maps.Marker({
+    var map_options = {
       map: $.frontendAssets.storage['google-maps'].maps[element.prop('id')],
       position: latlng,
-      draggable: draggable,
-      icon: {
+      draggable: draggable
+    };
+
+    if (element.data('icon-url') != undefined) {
+      map_options['icon'] = {
         url: element.data('icon-url'),
         scaledSize: new google.maps.Size(icon_width, icon_height),
-      },
-    });
+      };
+    }
+
+    $.frontendAssets.storage['google-maps'].markers[
+      element.prop('id')
+    ] = new google.maps.Marker(map_options);
 
     element.trigger('extension::google-maps::applied');
   },
