@@ -14,7 +14,7 @@ $.fn.extend({
 
     animate = typeof animate !== 'undefined' ? animate : true;
     options = typeof options !== 'undefined' ? options : {};
-
+    options.on = typeof options.on !== 'undefined' ? options.on : {};
 
     if (!animate && animation_false != false) {
       animate = true;
