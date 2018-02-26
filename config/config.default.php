@@ -21,6 +21,7 @@ return [
     'Flot'                    => [Assets\Flot::class, '0.8.3'],
     'FlotTooltop'             => [Assets\FlotTooltop::class, '0.8.7'],
     'GoogleMaps'              => [Assets\GoogleMaps::class],
+    'GoogleAnalytics'         => [Assets\GoogleAnalytics::class],
     'IcheckInput'             => [Assets\IcheckInput::class, '1.0.2'],
     'IfVisibleJs'             => [Assets\IfVisibleJs::class, '1.0.6'],
     'Jquery'                  => [Assets\Jquery::class, '3.3.1'],
