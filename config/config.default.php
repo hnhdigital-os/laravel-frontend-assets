@@ -38,7 +38,7 @@ return [
     'Sparkline'               => [Assets\Sparkline::class, '2.1.2'],
     'TextDiff'                => [Assets\TextDiff::class, '1.0.4'],
     'Toastr'                  => [Assets\Toastr::class, 'latest'],
-    'Select2'                 => [Assets\Select2::class, '4.0.3'],
+    'Select2'                 => [Assets\Select2::class, '4.0.5'],
     'Slick'                   => [Assets\Slick::class, '1.8.1'],
     'Steps'                   => [Assets\Steps::class, '1.1.0'],
     'StickyTabs'              => [Assets\StickyTabs::class, '1.0.3'],
