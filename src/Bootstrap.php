@@ -15,7 +15,6 @@ class Bootstrap
             $version = FrontendAsset::version(class_basename(__CLASS__), $version);
             FrontendAsset::add('https://maxcdn.bootstrapcdn.com/bootstrap/'.$version.'/js/bootstrap.min.js');
         }
-        FrontendAsset::container('StickyTabs');
         FrontendAsset::add('vendor/bootstrap.css');
     }
 }
