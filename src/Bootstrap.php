@@ -9,6 +9,7 @@ class Bootstrap
     public function __construct($version = false)
     {
         FrontendAsset::container('Jquery');
+        FrontendAsset::container('Popper');
         if (!env('APP_CDN', true)) {
             FrontendAsset::add('vendor/bootstrap.js');
         } else {
