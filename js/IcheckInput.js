@@ -6,10 +6,7 @@ $.frontendAssets.register('icheck-input', function(event) {
 
   if (!element.hasClass('icheck-applied')) {
     if (
-      !(
-        element.parent().hasClass('config-icheck-input_flat-green') ||
-        element.parent().hasClass('iradio_flat-green')
-      )
+      !(element.parent().hasClass('config-icheck-input_flat-green') || element.parent().hasClass('iradio_flat-green'))
     ) {
       element.addClass('icheck');
       element.addClass('icheckbox_flat-green');

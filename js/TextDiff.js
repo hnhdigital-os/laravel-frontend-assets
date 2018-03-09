@@ -16,11 +16,7 @@ $.frontendAssets.register('text-diff', function(event) {
     element.find('.pretty-text-original').show();
     element
       .find('.pretty-text-original')
-      .html(
-        '<del>' +
-          element.find('.pretty-text-original').html() +
-          '</del><ins>{empty value}</ins>'
-      );
+      .html('<del>' + element.find('.pretty-text-original').html() + '</del><ins>{empty value}</ins>');
     element.find('.pretty-text-changed').html('{empty value}');
     element.find('.pretty-text-container').hide();
   } else {

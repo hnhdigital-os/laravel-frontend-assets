@@ -3,7 +3,6 @@
  */
 $.fn.extend({
   animateCss: function(animation, animate, options) {
-
     if (typeof animation == 'object') {
       animation_name = animation[0];
       animation_false = animation[0];
@@ -22,8 +21,7 @@ $.fn.extend({
     }
 
     if (animate) {
-      var animationEnd =
-        'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+      var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
       $(this)
         .addClass('animated ' + animation_name)
         .one(animationEnd, function() {
