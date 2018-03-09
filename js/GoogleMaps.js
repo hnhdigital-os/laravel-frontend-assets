@@ -11,13 +11,14 @@ $.frontendAssets.register(
       map_zoom = 14;
     }
 
-    $.frontendAssets.storage['google-maps'].maps[
-      element.prop('id')
-    ] = new google.maps.Map(document.getElementById(element.prop('id')), {
-      center: new google.maps.LatLng(element.data('lat'), element.data('lng')),
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      zoom: map_zoom,
-    });
+    $.frontendAssets.storage['google-maps'].maps[element.prop('id')] = new google.maps.Map(
+      document.getElementById(element.prop('id')),
+      {
+        center: new google.maps.LatLng(element.data('lat'), element.data('lng')),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        zoom: map_zoom,
+      }
+    );
 
     var latlng = { lat: element.data('lat'), lng: element.data('lng') };
 
@@ -36,7 +37,7 @@ $.frontendAssets.register(
     var map_options = {
       map: $.frontendAssets.storage['google-maps'].maps[element.prop('id')],
       position: latlng,
-      draggable: draggable
+      draggable: draggable,
     };
 
     if (element.data('icon-url') != undefined) {
@@ -46,21 +47,17 @@ $.frontendAssets.register(
       };
     }
 
-    $.frontendAssets.storage['google-maps'].markers[
-      element.prop('id')
-    ] = new google.maps.Marker(map_options);
+    $.frontendAssets.storage['google-maps'].markers[element.prop('id')] = new google.maps.Marker(map_options);
 
     element.trigger('extension::google-maps::applied');
   },
   function() {
-    $.frontendAssets.storage[
-      'google-maps'
-    ].geocoder = new google.maps.Geocoder();
+    $.frontendAssets.storage['google-maps'].geocoder = new google.maps.Geocoder();
     $.frontendAssets.storage['google-maps'].maps = {};
     $.frontendAssets.storage['google-maps'].markers = {};
   },
   {
     maps: {},
-    markers: {}
+    markers: {},
   }
 );

@@ -4,7 +4,7 @@ namespace HnhDigital\LaravelFrontendAssets;
 
 use FrontendAsset;
 
-class ClipboardJs
+class Clipboard
 {
     public function __construct($version = false)
     {

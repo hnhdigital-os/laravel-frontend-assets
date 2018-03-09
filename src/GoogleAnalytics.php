@@ -18,7 +18,7 @@ class GoogleAnalytics
 
         FrontendAsset::add('https://www.googletagmanager.com/gtag/js?id='.$ga_key);
         // async
-        
+
         $script = "window.dataLayer = window.dataLayer || [];\n";
         $script .= "function gtag(){dataLayer.push(arguments);}\n";
         $script .= "gtag('js', new Date());\n";
