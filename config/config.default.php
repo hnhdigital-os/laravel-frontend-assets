@@ -33,7 +33,7 @@ return [
     'MiniColors'              => [Assets\MiniColors::class, '2.2.6'],
     'MultiEmailInput'         => [Assets\MultiEmailInput::class, '0.0.2'],
     'Pace'                    => [Assets\Pace::class, '1.0.2'],
-    'Popper'                  => [Assets\Popper::class, '1.12.9'],
+    'Popper'                  => [Assets\Popper::class, '1.13.0'],
     'Redactor'                => [Assets\Redactor::class],
     'Slimscroll'              => [Assets\Slimscroll::class, '1.3.7'],
     'Sparkline'               => [Assets\Sparkline::class, '2.1.2'],
