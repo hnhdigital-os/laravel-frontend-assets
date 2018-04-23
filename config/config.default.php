@@ -14,7 +14,7 @@ return [
     'PasswordComplexifyInput' => [Assets\PasswordComplexifyInput::class, '0.5.1'],
     'DateInput'               => [Assets\DateInput::class, '1.6.1'],
     'DiffMatchPatch'          => [false, '20121119'],
-    'Dropzone'                => [Assets\Dropzone::class, '5.3.0'],
+    'Dropzone'                => [Assets\Dropzone::class, '5.4.0'],
     'ElementTransitions'      => [Assets\ElementTransitions::class],
     'FontAwesome'             => [Assets\FontAwesome::class, '5.0.1'],
     'FlagIcon'                => [Assets\FlagIcon::class],
