@@ -10,7 +10,7 @@ return [
     'BackboneLocalPersist'    => [Assets\BackboneLocalPersist::class, '1.1.1'],
     'Bootstrap'               => [Assets\Bootstrap::class, '4.0.0'],
     'ChartJs'                 => [Assets\ChartJs::class, '2.7.1'],
-    'Clipboard'               => [Assets\Clipboard::class, '1.7.1'],
+    'Clipboard'               => [Assets\Clipboard::class, '2.0.0'],
     'PasswordComplexifyInput' => [Assets\PasswordComplexifyInput::class, '0.5.1'],
     'DateInput'               => [Assets\DateInput::class, '1.6.1'],
     'DiffMatchPatch'          => [false, '20121119'],
