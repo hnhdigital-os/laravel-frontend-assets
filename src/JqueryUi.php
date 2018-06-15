@@ -17,10 +17,10 @@ class JqueryUi
      */
     public function __construct($version = false)
     {
+        FrontendAsset::container('Jquery');
         $theme = empty($theme) ? config('frontend-assets.JqueryUiTheme.1') : $theme;
 
         if (!env('APP_CDN', true)) {
-            FrontendAsset::container('Jquery');
             FrontendAsset::add('vendor/jquery-ui.js', 'header');
             FrontendAsset::add('vendor/jquery-ui/themes/'.$theme.'/jquery-ui.min.css');
 
@@ -28,8 +28,7 @@ class JqueryUi
         }
 
         $version = FrontendAsset::version(class_basename(__CLASS__), $version);
-        FrontendAsset::addFirst('https://ajax.googleapis.com/ajax/libs/jqueryui/'.$version.'/jquery-ui.min.js', 'header');
-        FrontendAsset::addFirst('https://ajax.googleapis.com/ajax/libs/jqueryui/'.$version.'/themes/'.$theme.'/jquery-ui.min.css');
-        FrontendAsset::container('Jquery');
+        FrontendAsset::add('https://ajax.googleapis.com/ajax/libs/jqueryui/'.$version.'/jquery-ui.min.js', 'header');
+        FrontendAsset::add('https://ajax.googleapis.com/ajax/libs/jqueryui/'.$version.'/themes/'.$theme.'/jquery-ui.min.css');
     }
 }
