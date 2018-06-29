@@ -18,7 +18,6 @@ $.frontendAssets.register('select2', function(event) {
     if (element.data('select2-remote-data')) {
       options.ajax.data = element.data('select2-remote-data');
     }
-    options.ajax = element.data('select2-remote-data');
     options.escapeMarkup = function(markup) {
       return markup;
     };
