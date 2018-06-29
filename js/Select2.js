@@ -13,7 +13,7 @@ $.frontendAssets.register('select2', function(event) {
   }
   if (element.data('select2-remote-url')) {
     options.ajax = {
-      url: element.data('select2-remote-url')
+      url: element.data('select2-remote-url'),
     };
     if (element.data('select2-remote-data')) {
       options.ajax.data = element.data('select2-remote-data');
