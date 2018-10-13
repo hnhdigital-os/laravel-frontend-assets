@@ -17,7 +17,7 @@ return [
     'DiffMatchPatch'          => [false, '20121119'],
     'Dropzone'                => [Assets\Dropzone::class, '5.4.0'],
     'ElementTransitions'      => [Assets\ElementTransitions::class],
-    'FontAwesome'             => [Assets\FontAwesome::class, '5.2.0'],
+    'FontAwesome'             => [Assets\FontAwesome::class, '5.4.1'],
     'FlagIcon'                => [Assets\FlagIcon::class],
     'Flot'                    => [Assets\Flot::class, '0.8.3'],
     'FlotTooltop'             => [Assets\FlotTooltop::class, '0.8.7'],
