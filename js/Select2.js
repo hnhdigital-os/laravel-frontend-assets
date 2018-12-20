@@ -16,19 +16,19 @@ $.frontendAssets.register('select2', function(event) {
     options.allowClear = element.data('select2-allow-clear');
   }
 
-  // Specify ajax in full.
-  if (element.data('select2-remote-ajax')) {
-    options.ajax = element.data('select2-remote-url');
-  }
-
   // Specify by URL (and other data attributes).
   if (element.data('select2-remote-url')) {
 
-    // Specify remote source of options.
-    options.ajax = {
-      url: element.data('select2-remote-url'),
-      dataType: 'json',
-    };
+    // Specify ajax in full.
+    if (element.data('select2-remote-ajax')) {
+      options.ajax = element.data('select2-remote-ajax');
+    } else {
+      // Specify remote source of options.
+      options.ajax = {
+        url: element.data('select2-remote-url'),
+        dataType: 'json',
+      };
+    }
 
     // Specify data function.
     if (element.data('select2-remote-data')) {
