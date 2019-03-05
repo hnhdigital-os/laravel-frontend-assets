@@ -39,6 +39,7 @@ return [
     'Popper'                  => [Assets\Popper::class, '1.13.0'],
     'Raphael'                 => [Assets\Raphael::class, '2.2.7'],
     'Redactor'                => [Assets\Redactor::class],
+    'SignaturePad'            => [Assets\SignaturePad::class, '2.3.2'],
     'Slimscroll'              => [Assets\Slimscroll::class, '1.3.7'],
     'Sparkline'               => [Assets\Sparkline::class, '2.1.2'],
     'TextDiff'                => [Assets\TextDiff::class, '1.0.4'],
