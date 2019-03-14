@@ -24,7 +24,6 @@ class FontAwesome
         }
 
         FrontendAsset::add('vendor/fontawesome-all.css');
-        FrontendAsset::add('vendor/fontawesome/js/fontawesome-all.js');
     }
 
     /**
