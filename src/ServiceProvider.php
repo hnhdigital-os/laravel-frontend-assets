@@ -20,6 +20,6 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.default.php', 'frontend-assets');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.packages.php', 'hnhdigital.assets.packages');
     }
 }

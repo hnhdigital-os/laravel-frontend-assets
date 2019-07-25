@@ -8,7 +8,7 @@ class MiniColors
 {
     public function __construct($version = false)
     {
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/jquery.minicolors.css');
             FrontendAsset::add('vendor/jquery.minicolors.js');
         } else {

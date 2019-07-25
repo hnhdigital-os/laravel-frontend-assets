@@ -8,7 +8,7 @@ class SignaturePad
 {
     public function __construct($version = false)
     {
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/signature_pad.umd.js');
         } else {
             $version = FrontendAsset::version(class_basename(__CLASS__), $version);

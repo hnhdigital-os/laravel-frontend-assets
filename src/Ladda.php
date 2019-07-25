@@ -8,7 +8,7 @@ class Ladda
 {
     public function __construct($version = false)
     {
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/spin.min.js');
             FrontendAsset::add('vendor/ladda.min.js');
             FrontendAsset::add('vendor/ladda.jquery.min.js');

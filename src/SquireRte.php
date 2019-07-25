@@ -12,7 +12,7 @@ class SquireRte
     {
         $this->version = $version;
 
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FA::add('vendor/squire.js');
         } else {
             $version = FA::version(class_basename(__CLASS__), $version);

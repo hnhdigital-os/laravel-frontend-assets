@@ -8,7 +8,7 @@ class MetisMenu
 {
     public function __construct($version = false)
     {
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/metis-menu.min.js');
             FrontendAsset::add('vendor/metis-menu.min.css');
         } else {

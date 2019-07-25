@@ -12,7 +12,7 @@ class CodeMirror
     {
         $this->version = $version;
 
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FA::add('vendor/codemirror.css');
             FA::add('vendor/codemirror.js');
         } else {

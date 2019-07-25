@@ -16,7 +16,7 @@ class TuiEditor
         FA::package('MarkdownIt');
         FA::package('Raphael');
 
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FA::add('vendor/tui-editor/tui-editor.css');
             FA::add('vendor/tui-editor/tui-editor-contents.css');
             FA::add('vendor/to-mark.js');

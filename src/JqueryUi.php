@@ -20,7 +20,7 @@ class JqueryUi
         FrontendAsset::container('Jquery');
         $theme = empty($theme) ? config('frontend-assets.JqueryUiTheme.1') : $theme;
 
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/jquery-ui.js', 'header');
             FrontendAsset::add('vendor/jquery-ui/themes/'.$theme.'/jquery-ui.min.css');
 

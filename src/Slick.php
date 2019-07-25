@@ -8,7 +8,7 @@ class Slick
 {
     public function __construct($version = false)
     {
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/slick/slick.css');
             FrontendAsset::add('vendor/slick/slick-theme.css');
             FrontendAsset::add('vendor/slick/slick.js');

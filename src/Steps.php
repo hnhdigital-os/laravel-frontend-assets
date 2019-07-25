@@ -11,7 +11,7 @@ class Steps
         FrontendAsset::container('Jquery');
         FrontendAsset::container('ValidateInput');
 
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/steps.min.js');
             FrontendAsset::add('vendor/steps.css');
         } else {

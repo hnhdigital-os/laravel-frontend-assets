@@ -8,7 +8,7 @@ class Select2
 {
     public function __construct($version = false)
     {
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/select2.min.css');
             FrontendAsset::add('vendor/select2.min.js');
         } else {

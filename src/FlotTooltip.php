@@ -8,7 +8,7 @@ class FlotTooltip
 {
     public function __construct($version = false)
     {
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/jquery.flot.tooltip.min.js');
         } else {
             $version = FrontendAsset::version(class_basename(__CLASS__), $version);

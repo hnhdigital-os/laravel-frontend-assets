@@ -8,7 +8,7 @@ class TagsInput
 {
     public function __construct($version = false)
     {
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/tags-input.js');
             FrontendAsset::add('vendor/tags-input.css');
         } else {

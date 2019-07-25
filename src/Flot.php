@@ -8,7 +8,7 @@ class Flot
 {
     public function __construct($version = false)
     {
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/jquery.flot.js');
             FrontendAsset::add('vendor/jquery.flot.resize.js');
         } else {

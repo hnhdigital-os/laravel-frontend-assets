@@ -8,7 +8,7 @@ class PasswordComplexifyInput
 {
     public function __construct($version = false)
     {
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/complexify.js');
             FrontendAsset::add('vendor/complexify.banlist.js');
             FrontendAsset::add('vendor/complexify.css');

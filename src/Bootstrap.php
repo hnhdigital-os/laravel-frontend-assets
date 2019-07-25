@@ -10,7 +10,7 @@ class Bootstrap
     {
         FrontendAsset::container('Jquery');
         FrontendAsset::container('Popper');
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/bootstrap.js');
         } else {
             $version = FrontendAsset::version(class_basename(__CLASS__), $version);

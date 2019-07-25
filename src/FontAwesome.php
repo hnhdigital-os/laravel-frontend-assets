@@ -35,7 +35,7 @@ class FontAwesome
      */
     private function version4($version = false)
     {
-        if (!env('APP_CDN', true)) {
+        if (!config('hnhdigital.assets.cdn', true)) {
             FrontendAsset::add('vendor/font-awesome/css/font-awesome.min.css');
 
             return;
