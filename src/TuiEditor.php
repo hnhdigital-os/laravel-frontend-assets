@@ -10,9 +10,9 @@ class TuiEditor
         app('FrontendAsset')->package('Highlight', 'github');
         app('FrontendAsset')->package('CodeMirror');
         app('FrontendAsset')->package('SquireRte');
-        app('FrontendAsset')->package('ToMark');
         app('FrontendAsset')->package('MarkdownIt');
         app('FrontendAsset')->package('Raphael');
+        app('FrontendAsset')->package('ToMark');
 
         if (!config('hnhdigital.assets.cdn', true)) {
             app('FrontendAsset')->add('vendor/tui-editor/tui-editor.css');

@@ -2,21 +2,15 @@
 
 namespace HnhDigital\LaravelFrontendAssets;
 
-use FrontendAsset as FA;
-
 class ToMark
 {
-    private $verison;
-
     public function __construct($version = false)
     {
-        $this->version = $version;
-
         if (!config('hnhdigital.assets.cdn', true)) {
-            FA::add('vendor/to-mark.js');
+            app('FrontendAsset')->add('vendor/to-mark.js');
         } else {
-            $version = FA::version(class_basename(__CLASS__), $version);
-            FA::add('https://uicdn.toast.com/to-mark/'.$version.'/to-mark.min.js');
+            $version = app('FrontendAsset')->version(class_basename(__CLASS__), $version);
+            app('FrontendAsset')->add('https://uicdn.toast.com/to-mark/'.$version.'/to-mark.min.js');
         }
     }
 }

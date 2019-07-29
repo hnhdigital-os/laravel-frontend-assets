@@ -50,6 +50,7 @@ return [
     'StickyTabs'              => [Assets\StickyTabs::class, '1.0.3'],
     'Stripe'                  => [Assets\Stripe::class, '3'],
     'SquireRte'               => [Assets\SquireRte::class, '1.9.0'],
+    'ToMark'                  => [Assets\ToMark::class, '1.1.6'],
     'TagsInput'               => [Assets\TagsInput::class, '0.8.0'],
     'TimeInput'               => [Assets\TimeInput::class, '1.11.13'],
     'Translations'            => [Assets\Translations::class],
