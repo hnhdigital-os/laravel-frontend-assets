@@ -28,7 +28,7 @@ class TuiEditor
 
             app('FrontendAsset')->add('https://uicdn.toast.com/tui-editor/v'.$version.'/tui-editor.min.css');
             app('FrontendAsset')->add('https://uicdn.toast.com/tui-editor/v'.$version.'/tui-editor-contents.min.css');
-            app('FrontendAsset')->add('vendor/plantuml-encoder.min.js');
+            app('FrontendAsset')->add('vendor/plantuml-encoder.js');
             app('FrontendAsset')->add('https://uicdn.toast.com/tui.code-snippet/v'.$version_code_snippet.'/tui-code-snippet.min.js');
             app('FrontendAsset')->add('https://uicdn.toast.com/tui-color-picker/v'.$version_color_picker.'/tui-color-picker.min.js');
             app('FrontendAsset')->add('https://uicdn.toast.com/tui-editor/v'.$version.'/tui-editor-Editor-all.min.js');
