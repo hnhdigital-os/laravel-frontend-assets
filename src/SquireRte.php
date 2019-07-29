@@ -16,7 +16,7 @@ class SquireRte
             FA::add('vendor/squire.js');
         } else {
             $version = FA::version(class_basename(__CLASS__), $version);
-            FA::add('https://cdnjs.cloudflare.com/ajax/libs/squire-rte/'.$version.'/squire.min.js');            
+            FA::add('https://cdnjs.cloudflare.com/ajax/libs/squire-rte/'.$version.'/squire.js');
         }
     }
 }

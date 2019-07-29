@@ -2,8 +2,6 @@
 
 namespace HnhDigital\LaravelFrontendAssets;
 
-use FrontendAsset as FA;
-
 class CodeMirror
 {
     private $verison;
@@ -13,12 +11,12 @@ class CodeMirror
         $this->version = $version;
 
         if (!config('hnhdigital.assets.cdn', true)) {
-            FA::add('vendor/codemirror.css');
-            FA::add('vendor/codemirror.js');
+            app('FrontendAsset')->add('vendor/codemirror.css');
+            app('FrontendAsset')->add('vendor/codemirror.js');
         } else {
-            $version = FA::version(class_basename(__CLASS__), $version);
-            FA::add('https://cdnjs.cloudflare.com/ajax/libs/codemirror/'.$version.'/codemirror.css.js');
-            FA::add('https://cdnjs.cloudflare.com/ajax/libs/codemirror/'.$version.'/codemirror.min.js');            
+            $version = app('FrontendAsset')->version(class_basename(__CLASS__), $version);
+            app('FrontendAsset')->add('https://cdnjs.cloudflare.com/ajax/libs/codemirror/'.$version.'/codemirror.min.css');
+            app('FrontendAsset')->add('https://cdnjs.cloudflare.com/ajax/libs/codemirror/'.$version.'/codemirror.min.js');
         }
     }
 }

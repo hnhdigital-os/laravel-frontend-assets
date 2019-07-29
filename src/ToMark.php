@@ -16,7 +16,7 @@ class ToMark
             FA::add('vendor/to-mark.js');
         } else {
             $version = FA::version(class_basename(__CLASS__), $version);
-            FA::add('https://cdnjs.com/libraries/raphael/'.$version.'/raphael.min.js');            
+            FA::add('https://uicdn.toast.com/to-mark/'.$version.'/to-mark.min.js');
         }
     }
 }

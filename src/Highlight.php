@@ -16,7 +16,7 @@ class Highlight
     {
         $this->version = $version;
 
-        FA::add('https://nhnent.github.io/tui.editor/api/latest/lib/highlightjs/highlight.pack.js');
+        app('FrontendAsset')->add('https://nhn.github.io/tui.editor/api/latest/lib/highlightjs/highlight.pack.js');
     }
 
     /**
@@ -28,7 +28,7 @@ class Highlight
      */
     public function config(...$styles)
     {
-        $version = FA::version(class_basename(__CLASS__), $this->version);
+        $version = app('FrontendAsset')->version(class_basename(__CLASS__), $this->version);
         
         foreach ($styles as $style) {
            $this->loadStyle($version, $style);
@@ -44,7 +44,7 @@ class Highlight
      */
     private function loadStyle($version, $style)
     {
-        $version = FA::version(class_basename(__CLASS__), $version);
-        FA::add('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/'.$version.'/styles/'.$style.'.min.css');
+        $version = app('FrontendAsset')->version(class_basename(__CLASS__), $version);
+        app('FrontendAsset')->add('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/'.$version.'/styles/'.$style.'.min.css');
     }
 }
