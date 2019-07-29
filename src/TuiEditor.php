@@ -17,7 +17,6 @@ class TuiEditor
         if (!config('hnhdigital.assets.cdn', true)) {
             app('FrontendAsset')->add('vendor/tui-editor/tui-editor.css');
             app('FrontendAsset')->add('vendor/tui-editor/tui-editor-contents.css');
-            app('FrontendAsset')->add('vendor/to-mark.js');
             app('FrontendAsset')->add('vendor/plantuml-encoder.js');
             app('FrontendAsset')->add('vendor/tui-code-snippet.js');
             app('FrontendAsset')->add('vendor/tui-color-picker.js');
